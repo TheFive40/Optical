@@ -14,9 +14,9 @@ public class StaffRestController {
     private final RegisterStaffAdapter adapter;
     private final StaffMapper userRequestMapper;
 
-    public StaffRestController(RegisterStaffAdapter adapter, StaffMapper userRequestMapper) {
+    public StaffRestController(RegisterStaffAdapter adapter, StaffMapper staffRequestMapper) {
         this.adapter = adapter;
-        this.userRequestMapper = userRequestMapper;
+        this.userRequestMapper = staffRequestMapper;
     }
 
     @PostMapping("/sign")
