@@ -1,5 +1,6 @@
-package com.optical.net.domain.model.entity;
+package com.optical.net.product.infrastructure.persistance;
 
+import com.optical.net.sale.infrastructure.persistance.SaleDetail;
 import jakarta.persistence.*;
 import lombok.Data;
 import java.math.BigDecimal;

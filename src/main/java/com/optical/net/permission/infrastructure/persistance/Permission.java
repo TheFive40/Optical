@@ -1,4 +1,4 @@
-package com.optical.net.domain.model.entity;
+package com.optical.net.permission.infrastructure.persistance;
 
 import jakarta.persistence.Entity;
 import jakarta.persistence.Id;

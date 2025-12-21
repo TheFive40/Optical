@@ -1,5 +1,7 @@
-package com.optical.net.domain.model.entity;
+package com.optical.net.sale.infrastructure.persistance;
 
+import com.optical.net.patient.infrastructure.persistance.Patient;
+import com.optical.net.user.infrastructure.persistence.UserEntity;
 import jakarta.persistence.*;
 import lombok.Data;
 import java.math.BigDecimal;
@@ -30,7 +32,7 @@ public class Sale {
 
     @ManyToOne(fetch = FetchType.LAZY)
     @JoinColumn(name = "vendedor_id", nullable = false)
-    private User seller;
+    private UserEntity seller;
 
     @OneToMany(mappedBy = "sales", cascade = CascadeType.ALL, orphanRemoval = true)
     private List<SaleDetail> details;

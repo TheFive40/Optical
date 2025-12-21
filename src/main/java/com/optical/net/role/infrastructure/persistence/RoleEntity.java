@@ -1,5 +1,6 @@
-package com.optical.net.domain.model.entity;
+package com.optical.net.role.infrastructure.persistence;
 
+import com.optical.net.permission.infrastructure.persistance.Permission;
 import jakarta.persistence.*;
 import lombok.*;
 
@@ -11,7 +12,7 @@ import java.util.List;
 @Getter
 @Setter
 @Entity
-public class Role {
+public class RoleEntity {
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     private Long id;

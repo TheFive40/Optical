@@ -1,5 +1,6 @@
-package com.optical.net.domain.model.entity;
+package com.optical.net.appointment.infrastructure.persistance;
 
+import com.optical.net.patient.infrastructure.persistance.Patient;
 import jakarta.persistence.*;
 import lombok.Data;
 import java.time.LocalDateTime;

@@ -1,5 +1,8 @@
-package com.optical.net.domain.model.entity;
+package com.optical.net.user.infrastructure.persistence;
 
+import com.optical.net.recipe.infrastructure.persistance.Recipe;
+import com.optical.net.role.infrastructure.persistence.RoleEntity;
+import com.optical.net.sale.infrastructure.persistance.Sale;
 import jakarta.persistence.*;
 import lombok.*;
 
@@ -13,7 +16,7 @@ import java.util.List;
 @Setter
 @Entity
 @Table(name = "users")
-public class User {
+public class UserEntity {
 
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
@@ -59,7 +62,7 @@ public class User {
             joinColumns = @JoinColumn(name = "user_id"),
             inverseJoinColumns = @JoinColumn(name = "role_id")
     )
-    private List<Role> roles;
+    private List<RoleEntity> roleEntities;
 
 
     @OneToMany(mappedBy = "seller", fetch = FetchType.LAZY)
