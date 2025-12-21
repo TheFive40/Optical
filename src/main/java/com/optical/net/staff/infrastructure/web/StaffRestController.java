@@ -12,16 +12,16 @@ import org.springframework.web.bind.annotation.*;
 public class StaffRestController {
 
     private final RegisterStaffAdapter adapter;
-    private final StaffMapper userRequestMapper;
+    private final StaffMapper staffRequestMapper;
 
     public StaffRestController(RegisterStaffAdapter adapter, StaffMapper staffRequestMapper) {
         this.adapter = adapter;
-        this.userRequestMapper = staffRequestMapper;
+        this.staffRequestMapper = staffRequestMapper;
     }
 
     @PostMapping("/sign")
     public ResponseEntity<StaffRestResponse> signUp(@RequestBody StaffRestRequest request){
-        Staff createStaff = adapter.register(userRequestMapper.fromRestRequest(request));
+        Staff createStaff = adapter.register(staffRequestMapper.fromRestRequest(request));
         return ResponseEntity.ok(StaffRestResponse.builder()
                 .name(createStaff.name())
                 .email(createStaff.email())
