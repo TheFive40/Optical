@@ -1,4 +1,4 @@
-package com.optical.net.permission.infrastructure.web;
+package com.optical.net.staff.infrastructure.web;
 
 import java.time.LocalDate;
 

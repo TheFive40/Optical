@@ -2,7 +2,7 @@ package com.optical.net.staff.infrastructure.web;
 
 import jakarta.validation.constraints.*;
 
-public record UserRestRequest(
+public record StaffRestRequest(
         @NotBlank String username,
         @NotBlank @Email String email,
         @NotBlank String password,

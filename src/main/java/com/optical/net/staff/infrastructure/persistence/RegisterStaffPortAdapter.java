@@ -2,23 +2,23 @@ package com.optical.net.staff.infrastructure.persistence;
 
 import com.optical.net.staff.application.RegisterStaffPort;
 import com.optical.net.staff.domain.Staff;
-import com.optical.net.staff.infrastructure.mapper.UserMapper;
+import com.optical.net.staff.infrastructure.mapper.StaffMapper;
 import org.springframework.stereotype.Repository;
 
 @Repository
 public class RegisterStaffPortAdapter implements RegisterStaffPort {
-    private final UserRepository userRepository;
+    private final StaffRepository staffRepository;
 
-    private final UserMapper userMapper;
+    private final StaffMapper staffMapper;
 
-    public RegisterStaffPortAdapter(UserMapper userMapper, UserRepository userRepository) {
-        this.userMapper = userMapper;
-        this.userRepository = userRepository;
+    public RegisterStaffPortAdapter(StaffMapper staffMapper, StaffRepository staffRepository) {
+        this.staffMapper = staffMapper;
+        this.staffRepository = staffRepository;
     }
 
     @Override
     public Staff registerUser(Staff createStaff) {
-        userRepository.save(userMapper.fromApplication(createStaff));
+        staffRepository.save(staffMapper.fromApplication(createStaff));
         return createStaff;
     }
 }

@@ -5,7 +5,7 @@ import lombok.Builder;
 import java.time.LocalDateTime;
 
 @Builder
-public record UserRestResponse(
+public record StaffRestResponse(
         Long id,
         String username,
         String email,

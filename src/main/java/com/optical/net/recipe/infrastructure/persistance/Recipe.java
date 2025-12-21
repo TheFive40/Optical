@@ -1,7 +1,7 @@
 package com.optical.net.recipe.infrastructure.persistance;
 
 import com.optical.net.patient.infrastructure.persistance.Patient;
-import com.optical.net.staff.infrastructure.persistence.UserEntity;
+import com.optical.net.staff.infrastructure.persistence.StaffEntity;
 import jakarta.persistence.*;
 import lombok.Data;
 import java.math.BigDecimal;
@@ -57,7 +57,7 @@ public class Recipe {
 
     @ManyToOne(fetch = FetchType.LAZY)
     @JoinColumn(name = "optometrista_id", nullable = false)
-    private UserEntity optometrist;
+    private StaffEntity optometrist;
 
     @PrePersist
     protected void onCreate() {
