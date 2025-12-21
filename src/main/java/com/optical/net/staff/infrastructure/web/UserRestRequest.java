@@ -1,4 +1,4 @@
-package com.optical.net.user.infrastructure.web;
+package com.optical.net.staff.infrastructure.web;
 
 import jakarta.validation.constraints.*;
 

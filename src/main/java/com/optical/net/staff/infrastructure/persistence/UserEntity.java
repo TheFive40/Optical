@@ -1,4 +1,4 @@
-package com.optical.net.user.infrastructure.persistence;
+package com.optical.net.staff.infrastructure.persistence;
 
 import com.optical.net.recipe.infrastructure.persistance.Recipe;
 import com.optical.net.role.infrastructure.persistence.RoleEntity;

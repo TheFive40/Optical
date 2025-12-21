@@ -1,4 +1,4 @@
-package com.optical.net.user.infrastructure.persistence;
+package com.optical.net.staff.infrastructure.persistence;
 
 import org.springframework.data.repository.CrudRepository;
 import org.springframework.stereotype.Repository;
