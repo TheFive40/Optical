@@ -19,7 +19,7 @@ public class StaffRestController {
         this.staffRequestMapper = staffRequestMapper;
     }
 
-    @PostMapping("/sign")
+    @PostMapping("/register")
     public ResponseEntity<StaffRestResponse> signUp(@RequestBody StaffRestRequest request){
         Staff createStaff = adapter.register(staffRequestMapper.fromRestRequest(request));
         return ResponseEntity.ok(StaffRestResponse.builder()
