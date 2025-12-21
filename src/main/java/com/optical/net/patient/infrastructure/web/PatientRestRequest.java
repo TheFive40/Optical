@@ -1,4 +1,4 @@
-package com.optical.net.staff.infrastructure.web;
+package com.optical.net.patient.infrastructure.web;
 
 import jakarta.validation.constraints.*;
 import java.time.LocalDate;

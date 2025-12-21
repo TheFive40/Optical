@@ -10,6 +10,6 @@ public class RegisterStaffAdapter implements RegisterStaff {
     @Override
     public Staff register(Staff staff) {
 
-        return registerStaffPort.registerUser(staff);
+        return registerStaffPort.registerStaff(staff);
     }
 }

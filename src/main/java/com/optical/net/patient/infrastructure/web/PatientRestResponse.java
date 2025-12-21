@@ -1,4 +1,4 @@
-package com.optical.net.staff.infrastructure.web;
+package com.optical.net.patient.infrastructure.web;
 
 import java.time.LocalDate;
 

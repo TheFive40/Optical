@@ -17,7 +17,7 @@ public class RegisterStaffPortAdapter implements RegisterStaffPort {
     }
 
     @Override
-    public Staff registerUser(Staff createStaff) {
+    public Staff registerStaff(Staff createStaff) {
         staffRepository.save(staffMapper.fromApplication(createStaff));
         return createStaff;
     }
