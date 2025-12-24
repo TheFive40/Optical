@@ -1,4 +1,4 @@
-package com.optical.net.sale.infrastructure.persistance;
+package com.optical.net.sale.infrastructure.persistence;
 
 import com.optical.net.patient.infrastructure.persistance.Patient;
 import com.optical.net.staff.infrastructure.persistence.StaffEntity;

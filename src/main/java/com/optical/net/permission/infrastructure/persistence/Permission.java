@@ -1,4 +1,4 @@
-package com.optical.net.permission.infrastructure.persistance;
+package com.optical.net.permission.infrastructure.persistence;
 
 import jakarta.persistence.Entity;
 import jakarta.persistence.Id;

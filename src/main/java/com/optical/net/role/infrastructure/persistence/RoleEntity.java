@@ -1,6 +1,6 @@
 package com.optical.net.role.infrastructure.persistence;
 
-import com.optical.net.permission.infrastructure.persistance.Permission;
+import com.optical.net.permission.infrastructure.persistence.Permission;
 import jakarta.persistence.*;
 import lombok.*;
 

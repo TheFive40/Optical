@@ -1,4 +1,4 @@
-package com.optical.net.appointment.infrastructure.persistance;
+package com.optical.net.appointment.infrastructure.persistence;
 
 import com.optical.net.patient.infrastructure.persistance.Patient;
 import jakarta.persistence.*;

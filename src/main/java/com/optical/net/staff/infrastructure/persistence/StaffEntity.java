@@ -1,8 +1,8 @@
 package com.optical.net.staff.infrastructure.persistence;
 
-import com.optical.net.recipe.infrastructure.persistance.Recipe;
+import com.optical.net.recipe.infrastructure.persistence.Recipe;
 import com.optical.net.role.infrastructure.persistence.RoleEntity;
-import com.optical.net.sale.infrastructure.persistance.Sale;
+import com.optical.net.sale.infrastructure.persistence.Sale;
 import jakarta.persistence.*;
 import lombok.*;
 
