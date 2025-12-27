@@ -19,8 +19,6 @@ public record SaleRequest(
 
         PatientDomain patient,
 
-        StaffDomain seller,
-
-        List<SaleDetail> details
+        StaffDomain seller
 ) {
 }

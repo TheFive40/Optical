@@ -19,8 +19,6 @@ public record SaleResponse(
 
         PatientDomain patient,
 
-        StaffDomain seller,
-
-        List<SaleDetail> details
+        StaffDomain seller
 ) {
 }

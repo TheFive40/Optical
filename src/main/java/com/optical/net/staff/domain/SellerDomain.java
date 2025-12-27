@@ -1,9 +1,12 @@
 package com.optical.net.staff.domain;
 
+import com.optical.net.sale.infrastructure.persistence.Sale;
 import lombok.Builder;
 
 import java.math.BigDecimal;
 import java.time.LocalDate;
+import java.util.ArrayList;
+import java.util.List;
 
 /**
  * Modelo de dominio para Vendedor

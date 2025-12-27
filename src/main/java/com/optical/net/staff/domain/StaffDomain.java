@@ -10,9 +10,6 @@ public record StaffDomain(
         String email,
         String password,
         String name,
-        String lastName,
-        List<SaleDomain> sales,
-        List<RoleDomain> roles
-
+        String lastName
 ) {
 }

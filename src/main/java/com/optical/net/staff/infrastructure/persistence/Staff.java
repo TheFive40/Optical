@@ -54,7 +54,6 @@ public abstract  class Staff {
     @Column(nullable = false)
     private boolean enabled = true;
 
-
     @ManyToMany(fetch = FetchType.EAGER)
     @JoinTable(
             name = "staff_roles",
@@ -63,11 +62,6 @@ public abstract  class Staff {
     )
     private List<Role> roles;
 
-
-    @OneToMany(mappedBy = "seller", fetch = FetchType.LAZY)
-    private List<Sale> sales;
-
-
     @PrePersist
     protected void onCreate() {
         this.createdAt = LocalDate.now();
@@ -75,7 +69,6 @@ public abstract  class Staff {
 
     public abstract String getStaffType();
 
-    // Métodos helper comunes
     public boolean hasRole(String roleName) {
         return roles != null && roles.stream()
                 .anyMatch(role -> role.getName().equals(roleName));

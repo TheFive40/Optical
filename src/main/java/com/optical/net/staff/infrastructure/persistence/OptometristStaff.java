@@ -30,7 +30,6 @@ public class OptometristStaff extends Staff {
     @Builder.Default
     private List<Recipe> recipes = new ArrayList<>();
 
-    // Método helper para agregar receta
     public void addRecipe(Recipe recipe) {
         recipes.add(recipe);
         recipe.setOptometrist(this);
