@@ -24,6 +24,6 @@ public class RecipeController {
         var domain = recipeCaseAdapter.registerRecipe(recipeMapper.fromRequest(request));
         return ResponseEntity.ok(new RecipeResponse(domain.id(), domain.date(), domain.odSphere(), domain.odCylinder(),
                 domain.odAxis(), domain.odAddition(), domain.oiSphere(), domain.oiCylinder(), domain.oiAxis(), domain.oiAddition(),
-                domain.pupillaryDistance(), domain.observations(), domain.patient(), domain.optometrist()));
+                domain.pupillaryDistance(), domain.observations()));
     }
 }

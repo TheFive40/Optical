@@ -28,11 +28,6 @@ public record RecipeDomain(
 
         BigDecimal pupillaryDistance,
 
-        String observations,
-
-        PatientDomain patient,
-
-        StaffDomain optometrist
-
+        String observations
 ) {
 }

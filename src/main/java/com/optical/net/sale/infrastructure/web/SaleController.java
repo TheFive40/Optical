@@ -22,6 +22,6 @@ public class SaleController {
     public ResponseEntity<SaleResponse> toSell(SaleRequest request) {
         var domain = salePortAdapter.save(saleMapper.fromRequest(request));
         return ResponseEntity.ok(new SaleResponse(domain.id(), domain.total(), domain.paymentStatus(),
-                domain.saleDate(), domain.patient(), domain.seller(), domain.details()));
+                domain.saleDate()));
     }
 }

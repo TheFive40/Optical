@@ -15,10 +15,6 @@ public record SaleResponse(
 
         String paymentStatus,
 
-        LocalDateTime saleDate,
-
-        PatientDomain patient,
-
-        StaffDomain seller
+        LocalDateTime saleDate
 ) {
 }
