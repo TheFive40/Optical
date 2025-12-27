@@ -16,7 +16,7 @@ public class SaleDetail {
 
     @ManyToOne(fetch = FetchType.LAZY)
     @JoinColumn(name = "venta_id", nullable = false)
-    private Sale sale;
+    private Sale sales;
 
     @ManyToOne(fetch = FetchType.LAZY)
     @JoinColumn(name = "producto_id", nullable = false)

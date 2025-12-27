@@ -1,7 +1,7 @@
 package com.optical.net.sale.infrastructure.persistence;
 
 import com.optical.net.patient.infrastructure.persistance.Patient;
-import com.optical.net.staff.infrastructure.persistence.StaffEntity;
+import com.optical.net.staff.infrastructure.persistence.Staff;
 import jakarta.persistence.*;
 import lombok.Data;
 import java.math.BigDecimal;
@@ -32,7 +32,7 @@ public class Sale {
 
     @ManyToOne(fetch = FetchType.LAZY)
     @JoinColumn(name = "vendedor_id", nullable = false)
-    private StaffEntity seller;
+    private Staff seller;
 
     @OneToMany(mappedBy = "sales", cascade = CascadeType.ALL, orphanRemoval = true)
     private List<SaleDetail> details;

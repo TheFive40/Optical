@@ -30,6 +30,10 @@ public class Product {
     @Column(nullable = false)
     private Integer stock;
 
+    @Column(nullable = false)
+    private String url;
+
+
     @OneToMany(
             mappedBy = "product",
             cascade = CascadeType.ALL,
@@ -38,14 +42,5 @@ public class Product {
     )
     private List<SaleDetail> saleDetails;
 
-    public boolean hasStock(int quantity) {
-        return this.stock >= quantity;
-    }
 
-    public void reduceStock(int quantity) {
-        if (!hasStock(quantity)) {
-            throw new IllegalStateException("Stock insuficiente");
-        }
-        this.stock -= quantity;
-    }
 }

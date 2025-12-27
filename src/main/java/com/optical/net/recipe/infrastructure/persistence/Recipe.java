@@ -1,7 +1,7 @@
 package com.optical.net.recipe.infrastructure.persistence;
 
 import com.optical.net.patient.infrastructure.persistance.Patient;
-import com.optical.net.staff.infrastructure.persistence.StaffEntity;
+import com.optical.net.staff.infrastructure.persistence.Staff;
 import jakarta.persistence.*;
 import lombok.Data;
 import java.math.BigDecimal;
@@ -19,12 +19,11 @@ public class Recipe {
     @Column(nullable = false)
     private LocalDateTime date;
 
-    // --- Ojo Derecho (OD) ---
     @Column(name = "od_esfera", precision = 4, scale = 2)
     private BigDecimal odSphere;
 
     @Column(name = "od_cilindro", precision = 4, scale = 2)
-    private BigDecimal odCilynder;
+    private BigDecimal odCylinder;
 
     @Column(name = "od_eje")
     private Integer odAxis;
@@ -32,12 +31,11 @@ public class Recipe {
     @Column(name = "od_adicion", precision = 4, scale = 2)
     private BigDecimal odAddition;
 
-    // --- Ojo Izquierdo (OI) ---
     @Column(name = "oi_esfera", precision = 4, scale = 2)
     private BigDecimal oiSphere;
 
     @Column(name = "oi_cilindro", precision = 4, scale = 2)
-    private BigDecimal oiCilynder;
+    private BigDecimal oiCylinder;
 
     @Column(name = "oi_eje")
     private Integer oiAxis;
@@ -57,7 +55,7 @@ public class Recipe {
 
     @ManyToOne(fetch = FetchType.LAZY)
     @JoinColumn(name = "optometrista_id", nullable = false)
-    private StaffEntity optometrist;
+    private Staff optometrist;
 
     @PrePersist
     protected void onCreate() {
