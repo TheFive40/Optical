@@ -6,10 +6,11 @@ import java.math.BigDecimal;
 
 @Builder
 public record ProductResponse(
+        Long id,
         String brand,
         String model,
+        int stock,
         String type,
-        Integer stock,
         BigDecimal salePrice,
         String url
 ) {

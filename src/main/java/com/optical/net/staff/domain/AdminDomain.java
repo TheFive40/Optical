@@ -43,7 +43,9 @@ public record AdminDomain(
                 .enabled(true)
                 .build();
     }
-
+    public String getStaffType(){
+        return "ADMIN";
+    }
     public String getFullName() {
         return name + " " + lastName;
     }

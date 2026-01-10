@@ -17,7 +17,11 @@ public record OptometristDomain(
         String specialization,
         Integer yearsOfExperience,
         boolean enabled
+
 ) {
+    public String getStaffType(){
+        return "OPTOMETRIST";
+    }
     public String getFullName() {
         return name + " " + lastName;
     }

@@ -50,7 +50,9 @@ public record SellerDomain(
                 .enabled(true)
                 .build();
     }
-
+    public String getStaffType(){
+        return "SELLER";
+    }
     public String getFullName() {
         return name + " " + lastName;
     }

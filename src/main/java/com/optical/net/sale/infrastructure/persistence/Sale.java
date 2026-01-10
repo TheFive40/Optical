@@ -1,16 +1,23 @@
 package com.optical.net.sale.infrastructure.persistence;
 
 import com.optical.net.patient.infrastructure.persistance.Patient;
-import com.optical.net.staff.infrastructure.persistence.Staff;
+import com.optical.net.staff.infrastructure.persistence.staff.Staff;
 import jakarta.persistence.*;
+import lombok.AllArgsConstructor;
+import lombok.Builder;
 import lombok.Data;
+import lombok.NoArgsConstructor;
+
 import java.math.BigDecimal;
 import java.time.LocalDateTime;
 import java.util.List;
 
+@Builder
 @Data
 @Entity
 @Table(name = "ventas")
+@NoArgsConstructor
+@AllArgsConstructor
 public class Sale {
 
     @Id

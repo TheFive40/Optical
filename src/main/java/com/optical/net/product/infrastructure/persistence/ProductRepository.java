@@ -1,6 +1,13 @@
 package com.optical.net.product.infrastructure.persistence;
 
-import org.springframework.data.repository.CrudRepository;
+import org.springframework.data.jpa.repository.JpaRepository;
 
-public interface ProductRepository extends CrudRepository<Product, Long> {
+import java.util.List;
+import java.util.Optional;
+
+public interface ProductRepository extends JpaRepository<Product, Long> {
+    @Override
+    List<Product> findAll();
+
+    Optional<Product> findById(Long id);
 }

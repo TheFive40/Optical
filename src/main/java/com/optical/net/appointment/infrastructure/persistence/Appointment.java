@@ -1,6 +1,7 @@
 package com.optical.net.appointment.infrastructure.persistence;
 
 import com.optical.net.patient.infrastructure.persistance.Patient;
+import com.optical.net.staff.infrastructure.persistence.optometrist.OptometristStaff;
 import jakarta.persistence.*;
 import lombok.Data;
 import java.time.LocalDateTime;
@@ -26,6 +27,10 @@ public class Appointment {
     @ManyToOne(fetch = FetchType.LAZY)
     @JoinColumn(name = "paciente_id", nullable = false)
     private Patient patient;
+
+    @ManyToOne
+    @JoinColumn(name = "optometrist_id")
+    private OptometristStaff optometrist;
 
     @Column(name = "created_at", nullable = false, updatable = false)
     private LocalDateTime createdAt;

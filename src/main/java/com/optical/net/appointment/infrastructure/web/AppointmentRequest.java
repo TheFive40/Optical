@@ -9,7 +9,8 @@ public record AppointmentRequest(
         LocalDateTime dateTime,
         String reason,
         String status,
-        Patient patient,
+        String optometristName,
+        String patientName,
         LocalDateTime createdAt
 ) {
 }

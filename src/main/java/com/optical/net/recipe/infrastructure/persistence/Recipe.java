@@ -1,7 +1,7 @@
 package com.optical.net.recipe.infrastructure.persistence;
 
 import com.optical.net.patient.infrastructure.persistance.Patient;
-import com.optical.net.staff.infrastructure.persistence.Staff;
+import com.optical.net.staff.infrastructure.persistence.staff.Staff;
 import jakarta.persistence.*;
 import lombok.Data;
 import java.math.BigDecimal;

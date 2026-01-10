@@ -1,24 +1,16 @@
 package com.optical.net.sale.infrastructure.web;
 
-import com.optical.net.patient.domain.PatientDomain;
-import com.optical.net.sale.infrastructure.persistence.SaleDetail;
-import com.optical.net.staff.domain.StaffDomain;
-
-import java.math.BigDecimal;
-import java.time.LocalDateTime;
 import java.util.List;
 
 public record SaleRequest(
+
         Long id,
 
-        BigDecimal total,
+        String patientEmail,
 
-        String paymentStatus,
+        String sellerUsername,
 
-        LocalDateTime saleDate,
+        List<SaleDetailRequest> detailRequest
 
-        PatientDomain patient,
-
-        StaffDomain seller
 ) {
 }

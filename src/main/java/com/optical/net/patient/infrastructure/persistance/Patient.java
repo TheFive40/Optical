@@ -4,6 +4,7 @@ import com.optical.net.appointment.infrastructure.persistence.Appointment;
 import com.optical.net.recipe.infrastructure.persistence.Recipe;
 import com.optical.net.sale.infrastructure.persistence.Sale;
 import jakarta.persistence.*;
+import jakarta.validation.constraints.Email;
 import lombok.Data;
 import java.time.LocalDate;
 import java.util.List;
@@ -34,6 +35,11 @@ public class Patient {
 
     @Column(name = "historial_clinico_nro", unique = true, nullable = false)
     private String medicalHistoryNro;
+
+    @Email
+    private String email;
+
+    private LocalDate lastVisit;
 
     @OneToMany(
             mappedBy = "patient",

@@ -1,7 +1,8 @@
 package com.optical.net.staff.domain;
-import com.optical.net.accescontrol.domain.RoleDomain;
-import com.optical.net.sale.domain.SaleDomain;
+
 import lombok.Builder;
+
+import java.time.LocalDate;
 import java.util.List;
 
 @Builder
@@ -10,6 +11,10 @@ public record StaffDomain(
         String email,
         String password,
         String name,
-        String lastName
+        String lastName,
+        LocalDate createdAt,
+        Long id,
+        String rolname
+
 ) {
 }
